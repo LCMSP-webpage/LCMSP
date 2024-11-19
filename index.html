@@ -540,6 +540,41 @@
 </section>
 <!-- End video carousel -->
 
+<!-- Paper methond -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Additional experiments on Multi-style RL sample efficicency</h2>
+        <div class="content has-text-justified">
+          <p>
+            We conducted an experiment to preliminarily demonstrate the efficiency of this approach. 
+            The training environment involved drawing shapes like triangles, quadrilaterals, and circles, with three meta-behaviors and corresponding style parameters: 
+            one controlling the shape, another controlling the radius, and the third controlling the angular velocity. The specific environment setup can be referenced in [1] section 5.1. 
+            Four experimental conditions were established: <br> <br>
+            Experiment A: One group trained with one set of fixed style parameters. <br> <br>
+            Experiment B: Three groups, each trained by varying one style parameter while keeping the other two fixed. <br> <br>
+            Experiment C: Three groups, each trained by varying two style parameters while keeping the other one fixed. <br> <br>
+            Experiment D: One group trained by varying all three style parameters. <br> <br>
+            We recorded the episode return curves as the number of used samples increased, with three runs per group using different random seeds. 
+            The results showed that, with the same number of samples, the episode return for models in Experiment D was only slightly lower than models in Experiment A and was comparable to models in Experiment B and C. 
+            The results indicate that as the number of training styles increases, there is a modest decrease in sample efficiency, though the decline is not severe
+        </div>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="image-item">
+        <img src="static/images/multi_style_sample_efficiency_exp.png" alt="First image"/>
+      </div>
+    </div>
+    <div class="content has-text-justified">
+      <p>
+        [1] Mysore, Siddharth, et al. "Multi-critic actor learning: Teaching RL policies to act with style." International Conference on Learning Representations. 2022.
+    </div>
+  </div>
+</section>
+<!-- End paper methond -->
+
 <style>
   .carousel-container {
     display: flex;
